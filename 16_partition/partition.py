@@ -1,4 +1,13 @@
 def partition(lst, fn):
+    passed = []
+    failed = []
+    for val in lst:
+        if fn(val) is True:
+            passed.append(val)
+        else:
+            failed.append(val)
+    return [passed, failed]
+        
     """Partition lst by predicate.
      
      - lst: list of items

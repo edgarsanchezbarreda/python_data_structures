@@ -1,4 +1,8 @@
 def intersection(l1, l2):
+    set_l1 = set(l1)
+    set_l2 = set(l2)
+    return list(set_l1.intersection(set_l2))
+
     """Return intersection of two lists as a new list::
     
         >>> intersection([1, 2, 3], [2, 3, 4])

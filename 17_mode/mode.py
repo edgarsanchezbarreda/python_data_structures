@@ -1,4 +1,13 @@
 def mode(nums):
+    counts = {}
+    for num in nums:
+        if num in counts:
+            counts[num] += 1
+        else:
+            counts[num] = 1
+    for key in counts.keys():
+        if counts[key] == max(counts.values()):
+            return key
     """Return most-common number in list.
 
     For this function, there will always be a single-most-common value;
