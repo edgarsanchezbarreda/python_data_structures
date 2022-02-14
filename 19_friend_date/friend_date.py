@@ -1,4 +1,11 @@
 def friend_date(a, b):
+    result = False
+    for val in a[2]:
+        if val in b[2]:
+            result = True
+        else:
+            result = False
+    return result
     """Given two friends, do they have any hobbies in common?
 
     - a: friend #1, a tuple of (name, age, list-of-hobbies)
