@@ -1,4 +1,18 @@
 def sum_pairs(nums, goal):
+
+    checked = set()
+    
+    for num in nums:
+        difference = goal - num
+
+        if difference in checked:
+            return (difference, num)
+
+        checked.add(num)
+        
+    return ()
+
+
     """Return tuple of first pair of nums that sum to goal.
 
     For example:
