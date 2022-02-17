@@ -1,4 +1,25 @@
 def includes(collection, sought, start=None):
+    if type(collection) == dict:
+        return sought in collection.values()
+    if start == None or type(collection) == set:
+        return sought in collection
+    return sought in collection[start:]
+
+
+
+    # if start and type(collection) != set:
+    #     if sought in collection[start:]:
+    #         return True
+    #     else:
+    #         return False
+    # elif type(collection) == dict:
+    #     if sought in collection.values():
+    #         return True
+    #     else:
+    #         return False
+    # elif sought in collection:
+    #     return True        
+
     """Is sought in collection, starting at index start?
 
     Return True/False if sought is in the given collection:
