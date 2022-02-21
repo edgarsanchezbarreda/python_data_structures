@@ -1,4 +1,13 @@
 def is_odd_string(word):
+    start_point = ord('a') - 1
+    total = 0
+    for char in word:
+        total += (ord(char) - start_point)
+    if total % 2 == 1:
+        return True
+    else:
+        return False
+
     """Is the sum of the character-positions odd?
 
     Word is a simple word of uppercase/lowercase letters without punctuation.
